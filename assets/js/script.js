@@ -100,7 +100,7 @@ vivaldi.addEventListener('canplaythrough', () => {
 });
 
 
-const compositions = [
-  ['Saint-Saens: The Dance of the Death', 'saint-saens-1'],
-  ['Franz Schubert:_Musical-moment_in-F-minor']
-]
+// const compositions = [
+//   ['Saint-Saens: The Dance of the Death', 'saint-saens-1'],
+//   ['Franz Schubert:_Musical-moment_in-F-minor']
+// ]
