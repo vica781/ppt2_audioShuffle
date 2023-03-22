@@ -1,3 +1,4 @@
+// def sound variables
 const compositions = [
   ['Antonio Vivaldi: The Seasons. Winter. December', 'vivaldi-1'],
   ['Antonio Vivaldi: The Seasons. Summer.Thunderstorm', 'vivaldi-2'],
@@ -20,3 +21,13 @@ const compositions = [
   ['Wolfgang Amadeus Mozart: Marriage of Figaro. Overture', 'mozart-2'],
   ['Wolfgang Amadeus Mozart: Turkish March. Piano Sonata N11', 'mozart-3']
 ]
+
+let button = document.querySelector("button");
+button.onclick = (e) => {
+  let randomChoice = Math.floor(Math.random() * compositions.length);
+  let sound = document.querySelector(
+    `audio[data-composition='${compositions[randomChoice][1]}']`
+  );
+  console.log(sound);
+  sound.play();
+};
