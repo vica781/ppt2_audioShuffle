@@ -31,3 +31,46 @@ button.onclick = (e) => {
   console.log(sound);
   sound.play();
 };
+
+
+
+// 
+const question = document.querySelector(".question");
+const answers = document.querySelectorAll(".answers>*");
+const message = document.querySelector(".message");
+const questionsData = [
+  [" W.A. Mozart: Magic Flute", "mozart-1"],
+  ["J.S.Bach: Toccata in d minor BWV", "bach-1"],
+  ["Haydn: The Seasons", "haydn-1"],
+  ["A.Vivaldi: Magnificat", "vivaldi-1"],
+];
+
+let randomQuestion = Math.floor(Math.random() * 4);
+
+question.innerHTML = questionsData[randomQuestion][0];
+
+for (let i = 0; i < 4; i++) {
+  answers[i].innerHTML = questionsData[i][0];
+  answers[i].onclick = function (e) {
+    if (i === randomQuestion) {
+      answers[i].classList.add("correct");
+      message.innerHTML = `Woow. That's correct!`;
+      message.classList.add("correct");
+    } else {
+      answers[i].classList.add("wrong");
+      message.innerHTML = `Nooo. That's wrong!`;
+      message.classList.add("wrong");
+    }
+    setTimeout(() => {
+      let selection = i;
+      if (message.classList.contains("wrong")) {
+        answers[selection].classList.remove("wrong");
+        message.classList.remove("wrong");
+      } else {
+        answers[selection].classList.remove("correct");
+        message.classList.remove("correct");
+      }
+      message.innerHTML = "Try to guess!";
+    }, 1000);
+  };
+}
