@@ -1,0 +1,54 @@
+.quiz-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.quiz-field > *{
+    padding: 10px;
+}
+
+.question {
+    background-color: yellowgreen;
+    font-size: large;
+    color: brown;
+    width: 30%;
+    margin: 0 auto;
+}
+
+.answers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.answers>* {
+    width: 48%;
+    height: 25px;
+    background-color: aquamarine;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    padding: 10px 0;
+    margin: 10px;
+}
+
+
+.message {
+    width: 30%;
+    height: 25px;
+    background-color: pink;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.correct {
+    background-color: blue;
+}
+
+.wrong {
+    background-color: red;
+}
